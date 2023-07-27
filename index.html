@@ -3,24 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind & daisyUI Start-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind & daisyUI End-->
+
+      <!-- Roboto google font start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Roboto google font end -->
+
+      <!-- font awesome start -->
+  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+    <!-- font awesome end -->
+
+    <!-- tailwind custom color start-->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                'common-color': '#F85559',
               }
             }
           }
         }
       </script>
+     <!-- tailwind custom color start-->
+
+     <style>
+      .font-roboto {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+
     <title>Fruit Brust</title>
 </head>
 
-<body>
-    <header></header>
+<body class="m-0 p-0">
+    <header>
+          <!--Navbar section start-->
+    <section class="mx-5  md:mx-10 lg:mx-20 my-8">
+      <div>
+        <div class="navbar bg-common-color rounded-full text-white">
+          <div class="flex gap-5 ml-5">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Shop</p>
+            <p>All Fruits</p>
+          </div>
+
+          <div class="flex-1 justify-center">
+            <div class="flex items-center">
+              <img src="./images/logo.png" alt="">
+              <a class="btn btn-ghost normal-case text-xl">Fruit Burst</a>
+            </div>
+          </div>
+          <div class="flex-none relative ">
+
+            <input type="text" placeholder="Search here"
+              class="input input-bordered w-24 h-10 md:w-auto rounded-full mr-5" />
+            <span class="absolute inset-y-0 right-8  flex justify-end items-center pl-3 ">
+              <i class="fa-solid fa-magnifying-glass text-black"></i>
+            </span>
+          </div>
+
+          <div class="dropdown relative md:hidden lg:hidden">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Navbar section end-->
+    </header>
     <main></main>
     <footer></footer>
 </body>
